@@ -87,9 +87,11 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Screenshots
 
 - **Home Page**:
-  ![Home Page](images/home_page.png)
+  ![image](https://github.com/user-attachments/assets/dbbaee96-72b9-434e-ac16-6c81c09f7224)
+
 
 - **Learning Section**:
-  ![Learning Section](images/learning_section.png)
+  ![image](https://github.com/user-attachments/assets/91999cb5-7a4a-4b06-af0a-f9654ec22d98)
+
 
 For additional screenshots, please refer to the project documentation.
