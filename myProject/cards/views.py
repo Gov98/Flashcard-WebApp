@@ -270,7 +270,7 @@ def get_interesting_facts(request):
         card_name = data.get("card_name")
         category_name = data.get("category_name")
         client = OpenAI(
-            api_key="LL-5Cn6of7n0cxWfuwivcwljNiFHAeEHwr8oLWGfBsL78EB5Oe1NaXIuGB9nFk9unUz",
+            api_key="api-key",
             base_url="https://api.llama-api.com"
         )
 
