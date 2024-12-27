@@ -87,11 +87,14 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Screenshots
 
 - **Home Page**:
-  ![image](https://github.com/user-attachments/assets/dbbaee96-72b9-434e-ac16-6c81c09f7224)
-
+  ![image](https://github.com/user-attachments/assets/7061ad05-4ebf-4956-9710-6dd64842a3ac)
+  
+- **Manage Cards**:
+  ![image](https://github.com/user-attachments/assets/e43e8354-804e-4ae2-9549-e1fde6da42c7)
 
 - **Learning Section**:
-  ![image](https://github.com/user-attachments/assets/91999cb5-7a4a-4b06-af0a-f9654ec22d98)
+  ![image](https://github.com/user-attachments/assets/d46a6e74-1372-491d-a3ae-5d1f090d4d41)
+
 
 
 For additional screenshots, please refer to the project documentation.
