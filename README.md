@@ -32,7 +32,7 @@ To run this project, you will need:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/flashcard-trainer.git
+   git clone https://github.com/Gov98/Flashcard-WebApp.git
    cd flashcard-trainer
    ```
 
