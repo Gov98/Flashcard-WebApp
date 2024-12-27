@@ -1,0 +1,704 @@
+{
+    "flashcards": [
+        {
+            "Category_Id": 1,
+            "Category_Name": "Animals",
+            "Cards": [
+                {
+                    "Card_Id": 1,
+                    "Card_Name": "Adelie Penguin",
+                    "Card_Desc": "Ad\u00e9lie Penguins are small, social Antarctic birds.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\1_1_adelie-penguin-1-350x205.jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T14:57:08.814046"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 2,
+                    "Card_Name": "African Buffalo",
+                    "Card_Desc": "Large, formidable herbivore with distinctive horns found in African savannas.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\1_2_African-Buffalo-350x205.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:34:58.983331"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 3,
+                    "Card_Name": "African Elephant",
+                    "Card_Desc": "Largest land mammal, characterized by big ears and powerful tusks.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\1_3_african-elephant-1-350x205.jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:36:46.943387"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:37.570681"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 4,
+                    "Card_Name": "Bactrian Camels",
+                    "Card_Desc": "rugged, dual-humped desert dwellers of Central Asia.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\1_4_bactrian-camel-1-350x205.jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:49:35.015576"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 5,
+                    "Card_Name": "Macaque Monkeys",
+                    "Card_Desc": "Agile, social primates found across Asia.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\1_5_macaque-monkey-2-350x205.jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:50.603045"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 6,
+                    "Card_Name": "Masai Giraffe",
+                    "Card_Desc": "Tall, patterned savanna dweller in East Africa.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\1_6_masai-giraffe-2-350x205.jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-24T10:51:12.177249"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 7,
+                    "Card_Name": "Orangutan",
+                    "Card_Desc": "Solitary, intelligent ape native to Southeast Asia.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\1_7_orangutan-2-350x205.jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:36:15.721463"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:00.401935"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Category_Id": 4,
+            "Category_Name": "German Traffic Signs",
+            "Cards": [
+                {
+                    "Card_Id": 1,
+                    "Card_Name": "Aircraft",
+                    "Card_Desc": "Typically used with a supplementary sign to specify the danger",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Aircraft.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T14:57:09.233126"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T14:57:09.406152"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T14:57:09.613064"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T15:12:13.477537"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T15:12:45.846571"
+                        }
+                    ],
+                    "Last_Correct_Guess": "2024-06-22T11:25:53.982714"
+                },
+                {
+                    "Card_Id": 2,
+                    "Card_Name": "Amphibian crossing",
+                    "Card_Desc": "You are entering an area where the speed limit applies to all roads until you pass an 'End of speed limit zone'sign",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Amphibian crossing.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:34:58.983331"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 3,
+                    "Card_Name": "Bicycle crossing",
+                    "Card_Desc": "You are entering an area where the speed limit applies to all roads until you pass an 'End of speed limit zone'sign",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Bicycle crossing.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:36:46.943387"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:37.570681"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 4,
+                    "Card_Name": "Cattle",
+                    "Card_Desc": "Herding animals likely on road, use caution",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Cattle.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:49:35.015576"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 5,
+                    "Card_Name": "Congestion hazard",
+                    "Card_Desc": "Traffic may slow due to congestion ahead",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Congestion hazard.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:50.603045"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 6,
+                    "Card_Name": "Curve",
+                    "Card_Desc": "Sharp bend ahead, reduce speed",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Curve.png"
+                },
+                {
+                    "Card_Id": 7,
+                    "Card_Name": "Double curve",
+                    "Card_Desc": "Two consecutive sharp bends, proceed with caution",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Double curve.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:36:15.721463"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:00.401935"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 8,
+                    "Card_Name": "Falling rock",
+                    "Card_Desc": "Risk of falling rocks, drive carefully",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Falling rocks.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:24.589045"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 9,
+                    "Card_Name": "General danger",
+                    "Card_Desc": "Various hazards ahead, stay alert",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/General danger.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T12:55:24.453824"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:53.813423"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 10,
+                    "Card_Name": "Ice snow",
+                    "Card_Desc": "Risk of ice or snow on road, be cautious",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Ice  snow.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:32.553746"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 11,
+                    "Card_Name": "Insufficient clearance  Tree overhang",
+                    "Card_Desc": "Low-hanging tree branches may obstruct roadway",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Insufficient clearance  Tree overhang.png"
+                },
+                {
+                    "Card_Id": 12,
+                    "Card_Name": "Loose gravel",
+                    "Card_Desc": "Road surface may have loose gravel, handle with care",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/loose gravel.png"
+                },
+                {
+                    "Card_Id": 13,
+                    "Card_Name": "Movable Bridge",
+                    "Card_Desc": "Bridge structure may move, drive steadily",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Moveable bridge.png"
+                },
+                {
+                    "Card_Id": 14,
+                    "Card_Name": "Pedestrian crossing",
+                    "Card_Desc": "Crosswalk ahead, watch for pedestrians",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Pedestrian crossing.png"
+                },
+                {
+                    "Card_Id": 15,
+                    "Card_Name": "Pedestrians",
+                    "Card_Desc": "Area with frequent pedestrian activity",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Pedestrians.png"
+                },
+                {
+                    "Card_Id": 16,
+                    "Card_Name": "Railway crossing",
+                    "Card_Desc": "Crossing railway tracks, check for trains",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Railway crossing.png"
+                },
+                {
+                    "Card_Id": 17,
+                    "Card_Name": "Rider",
+                    "Card_Desc": "Equestrian activity area, be mindful",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Rider.png"
+                },
+                {
+                    "Card_Id": 18,
+                    "Card_Name": "Road narrows left",
+                    "Card_Desc": "Left side of road narrows, adjust position",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Road narrows left.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:51.696233"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 19,
+                    "Card_Name": "Road narrows ",
+                    "Card_Desc": "Road ahead narrows, drive carefully",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Road narrows.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T12:55:20.781002"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:24.956217"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 20,
+                    "Card_Name": "Roadworks",
+                    "Card_Desc": "Construction work ahead, prepare for delays",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Roadworks.png"
+                },
+                {
+                    "Card_Id": 21,
+                    "Card_Name": "Shore riverbank",
+                    "Card_Desc": "Riverbank or shore nearby, watch for conditions",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Shore riverbank.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:55.681811"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 22,
+                    "Card_Name": "Slippery when wet or dirty",
+                    "Card_Desc": "Road may be slippery when wet or dirty",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Slippery when wet or dirty.png"
+                },
+                {
+                    "Card_Id": 23,
+                    "Card_Name": "Steep downgrade",
+                    "Card_Desc": "Steep downhill slope ahead, control speed",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Steep downgrade.png"
+                },
+                {
+                    "Card_Id": 24,
+                    "Card_Name": "Steep upgrade",
+                    "Card_Desc": "Steep uphill slope ahead, prepare for climb",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Steep upgrade.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:52.712949"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 25,
+                    "Card_Name": "Strong crosswind",
+                    "Card_Desc": "Area prone to strong crosswinds, maintain control",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Strong crosswind.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:37.881686"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 26,
+                    "Card_Name": "Traffic signals ahead",
+                    "Card_Desc": "Traffic signals are ahead, be prepared to stop",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Traffic signals ahead.png"
+                },
+                {
+                    "Card_Id": 27,
+                    "Card_Name": "Two-way traffic",
+                    "Card_Desc": "Two-way traffic ahead, stay in lane",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Two-way traffic.png"
+                },
+                {
+                    "Card_Id": 28,
+                    "Card_Name": "Uncontrolled intersection ahead",
+                    "Card_Desc": "Intersection without traffic control ahead",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Uncontrolled intersection ahead.png"
+                },
+                {
+                    "Card_Id": 29,
+                    "Card_Name": "Uneven road surface",
+                    "Card_Desc": "Road surface uneven or bumpy, drive carefully",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Uneven road surface.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:49.197842"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 30,
+                    "Card_Name": "Watch for children",
+                    "Card_Desc": "Children may be present, drive cautiously",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Watch for children.png"
+                },
+                {
+                    "Card_Id": 31,
+                    "Card_Name": "Wild animal crossing",
+                    "Card_Desc": "Wild animals may cross the road, be vigilant",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Wild animal crossing.png"
+                }
+            ]
+        },
+        {
+            "Category_Id": 3,
+            "Category_Name": "Bikes",
+            "Cards": [
+                {
+                    "Card_Id": 1,
+                    "Card_Name": "BMW R1250GS",
+                    "Card_Desc": "This is an Adventure bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/BMW R1250GS.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T14:57:09.233126"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T14:57:09.406152"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T14:57:09.613064"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T15:12:13.477537"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T15:12:45.846571"
+                        }
+                    ],
+                    "Last_Correct_Guess": "2024-06-22T11:25:53.982714"
+                },
+                {
+                    "Card_Id": 2,
+                    "Card_Name": "Harley Fat Boy",
+                    "Card_Desc": "This is a Cruiser bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Harley Fat Boy.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:34:58.983331"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 3,
+                    "Card_Name": "Yamaha MT-07",
+                    "Card_Desc": "This is a Naked bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Yamaha MT-07.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:36:46.943387"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:37.570681"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 4,
+                    "Card_Name": "Honda CBR1000RR-R Fireblade",
+                    "Card_Desc": "This is a Sports bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Honda CBR1000RR-R Fireblade.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:49:35.015576"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 5,
+                    "Card_Name": "BMW R1250RT",
+                    "Card_Desc": "This is a Tourer bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/BMW R1250RT.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:50.603045"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 6,
+                    "Card_Name": "Kawasaki Ninja 1000SX",
+                    "Card_Desc": "This is a sports tourer bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Kawasaki Ninja 1000SX.png"
+                },
+                {
+                    "Card_Id": 7,
+                    "Card_Name": "Honda CRF450L",
+                    "Card_Desc": "This is a Dual sport bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Honda CRF450L.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T20:36:15.721463"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:00.402925"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 8,
+                    "Card_Name": "Triumph Bonneville T120",
+                    "Card_Desc": "This is a Classic bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Triumph Bonneville T120.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:24.589045"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 9,
+                    "Card_Name": "KTM 450 SX-F",
+                    "Card_Desc": "This is an Off-road bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/KTM 450 SX-F.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T12:55:24.453824"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:53.813423"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 10,
+                    "Card_Name": "Honda PCX125",
+                    "Card_Desc": "This is a Scooter",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Honda PCX125.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:32.553746"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 11,
+                    "Card_Name": "Mash Roadstar 50",
+                    "Card_Desc": "This is a Moped",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Mash Roadstar 50.png"
+                },
+                {
+                    "Card_Id": 12,
+                    "Card_Name": "GL1800 Goldwing",
+                    "Card_Desc": "This is a Touring bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/GL1800 Goldwing.png"
+                },
+                {
+                    "Card_Id": 13,
+                    "Card_Name": "Harley Davidson Low Rider",
+                    "Card_Desc": "This is a Chopper bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Harley Davidson Low Rider.png"
+                },
+                {
+                    "Card_Id": 14,
+                    "Card_Name": "Honda CB650F",
+                    "Card_Desc": "This is a Naked bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Honda CB650F.png"
+                },
+                {
+                    "Card_Id": 15,
+                    "Card_Name": "Kawasaki Z900",
+                    "Card_Desc": "This is a Cafe racer bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Kawasaki Z900.png"
+                },
+                {
+                    "Card_Id": 16,
+                    "Card_Name": "Suzuki Hayabusa",
+                    "Card_Desc": "This is a Hyper sports bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Suzuki Hayabusa.png"
+                },
+                {
+                    "Card_Id": 17,
+                    "Card_Name": "Triumph Rocket III",
+                    "Card_Desc": "This is a Cruiser bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Triumph Rocket III.png"
+                },
+                {
+                    "Card_Id": 18,
+                    "Card_Name": "Yamaha YZF-R3",
+                    "Card_Desc": "This is a Sports bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Yamaha YZF-R3.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:54:51.696233"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 19,
+                    "Card_Name": "Yamaha MT-10 SP",
+                    "Card_Desc": "This is a Street Fighter bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Yamaha MT-10 SP.png",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-21T12:55:20.781002"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-22T09:55:24.956217"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 20,
+                    "Card_Name": "Norton Commando 750",
+                    "Card_Desc": "This is a Classic bike",
+                    "Path": "C:/Users/govin/Documents/dummydjango/myProject/cards/static/images/Norton Commando 750.png"
+                }
+            ]
+        },
+        {
+            "Category_Id": 2,
+            "Category_Name": "Birds",
+            "Cards": [
+                {
+                    "Card_Id": 1,
+                    "Card_Name": "Auks",
+                    "Card_Desc": "Auks are a family of seabirds.",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\2_1_Atlantic-Puffin (1).jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T10:48:08.695069"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T10:48:23.689144"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T11:00:27.440443"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T11:20:34.812517"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T11:22:16.665474"
+                        }
+                    ]
+                },
+                {
+                    "Card_Id": 2,
+                    "Card_Name": "Condors",
+                    "Card_Desc": "Critically endangered species",
+                    "Path": "C:\\Users\\govin\\Documents\\dummydjango\\myProject\\cards/static/images\\2_2_Andean-Condor.jpg",
+                    "Learning_History": [
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T10:48:07.039168"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T10:48:25.262844"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T11:00:29.066990"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T11:20:31.611726"
+                        },
+                        {
+                            "result": "wrong",
+                            "timestamp": "2024-06-23T11:22:14.522950"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

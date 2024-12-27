@@ -1,0 +1,294 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="flashcard-container">
+    <div class="flashcard" id="flashcard">
+        <div class="flashcard-content front">
+            <img id="flashcard-front" alt="Flashcard Image" >
+        </div>
+        <div class="flashcard-content back">
+            <img id="flashcard-back-image" alt="Card Image" >
+            <h2 id="flashcard-back-name"></h2>
+            <p id="flashcard-back-desc"></p>
+        </div>
+    </div>
+    <div class="learning-history-tab" id="learningHistoryTab"></div>
+    <div class="bulb-icon">
+        <img src="{% static 'bulb_icon.png' %}" alt="Interesting Facts">
+    </div>
+    <div class="tooltip">
+        <h3 class="Interesting-facts-title">Interesting Facts</h3>
+        <div class="tooltip-content"></div><br><br>
+        <div class="flash-icon-container">
+            <img src="{% static 'flash.png' %}" alt="Flash Icon" class="flash-icon">
+            <span class="ai-powered-text">AI Powered</span>
+        </div>
+    </div>
+    <br><br>
+    <div class="buttons-container">
+        <button id="showAnswerButton" onclick="showAnswer()">Show Answer</button>
+        <button onclick="prevCard()">Previous</button>
+        <button id="nextButton" onclick="nextCard()">Next</button>
+    </div>
+    <div class="buttons-container">
+        <button id="rightAnswerButton" onclick="markRight()">Right Answer</button>
+        <button id="wrongAnswerButton" onclick="markWrong()">Wrong Answer</button>
+        <button id="submitButton" disabled onclick="submitScore()" >Submit</button>
+    </div>
+</div>
+<p class="answer-count">
+    No of right answers: <span id="rightAnswerCount">0</span><br><br>
+    No of wrong answers: <span id="wrongAnswerCount">0</span>
+</p>
+<a href="{% url 'learning' %}" class="back-button">&laquo; Back </a>
+
+<script>
+    var currentCardIndex = 0;
+    var rightAnswers = 0;
+    var wrongAnswers = 0;
+    var cards = {{ category.Cards|safe }};
+    var isFlipped = false;
+    var hasShownAnswer = false;
+    var category_id={{category_id|safe}}
+
+    // Shuffle function to randomly reorder cards array
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Shuffle the cards array
+    cards = shuffleArray(cards);
+
+    document.addEventListener("DOMContentLoaded", function() {
+        showCard(currentCardIndex);
+        var bulbIcon = document.querySelector('.bulb-icon');
+        var tooltip = document.querySelector('.tooltip');
+
+        bulbIcon.addEventListener('mouseover', function() {
+            tooltip.style.display = 'block';
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!tooltip.contains(event.target) && !bulbIcon.contains(event.target)) {
+                tooltip.style.display = 'none';
+            }
+        });
+    });
+
+    function flipCard() {
+        var card = document.getElementById("flashcard");
+        card.classList.toggle("flipped");
+        isFlipped = !isFlipped;
+        updateButtonsState();
+    }
+
+    function showAnswer() {
+        if (!hasShownAnswer) {
+            flipCard();
+            hasShownAnswer = true;
+            document.querySelector('.bulb-icon').style.display = 'block';
+        }
+    }
+
+    function markRight() {
+        if (isFlipped) {
+            rightAnswers++;
+            document.getElementById("rightAnswerCount").innerText = rightAnswers;
+            updateCorrectGuess(cards[currentCardIndex].Card_Id,'correct',category_id);
+            nextCard();
+        }
+    }
+
+    function markWrong() {
+        if (isFlipped) {
+            wrongAnswers++;
+            document.getElementById("wrongAnswerCount").innerText = wrongAnswers;
+            updateCorrectGuess(cards[currentCardIndex].Card_Id,'wrong',category_id);
+            nextCard();
+        }
+    }
+
+    function showCard(index) {
+        var cardData = cards[index];
+        document.getElementById("flashcard-front").src = "data:image/jpeg;base64," + cardData.Image_Base64;
+        document.getElementById("flashcard-back-image").src = "data:image/jpeg;base64," + cardData.Image_Base64;
+        document.getElementById("flashcard-back-name").innerText = cardData.Card_Name;
+        document.getElementById("flashcard-back-desc").innerText = cardData.Card_Desc;
+        document.getElementById("flashcard").classList.remove("flipped");
+        isFlipped = false;
+        hasShownAnswer = false;
+        updateButtonsState();
+        showLearningHistory(cardData.Learning_History);
+        document.querySelector('.bulb-icon').style.display = 'none';
+        document.querySelector('.tooltip').style.display = 'none';
+        document.querySelector('.tooltip-content').innerText = ''; // Clear tooltip content
+
+        // Fetch interesting facts upon showing the card
+        fetchInterestingFacts(cardData.Card_Name, "{{ category.Category_Name }}");
+    }
+
+    function prevCard() {
+        if (currentCardIndex > 0) {
+            currentCardIndex--;
+            showCard(currentCardIndex);
+        }
+    }
+
+    function nextCard() {
+        if (currentCardIndex < cards.length - 1) {
+            currentCardIndex++;
+            showCard(currentCardIndex);
+        }
+    }
+
+    function updateButtonsState() {
+        var showAnswerButton = document.getElementById("showAnswerButton");
+        var rightAnswerButton = document.getElementById("rightAnswerButton");
+        var wrongAnswerButton = document.getElementById("wrongAnswerButton");
+        var nextButton = document.getElementById("nextButton");
+        var submitButton = document.getElementById("submitButton");
+        console.log("No of Cards")
+        console.log(cards.length)
+
+        if (showAnswerButton && rightAnswerButton && wrongAnswerButton && submitButton && nextButton) {
+            rightAnswerButton.disabled = !isFlipped;
+            wrongAnswerButton.disabled = !isFlipped;
+            console.log(currentCardIndex)
+            if (currentCardIndex === cards.length - 1) {
+                console.log("true")
+                submitButton.disabled = !isFlipped;
+                nextButton.disabled = isFlipped;
+            }
+        } else {
+            console.error("One or more buttons not found.");
+        }
+    }
+
+    function submitScore() {
+        var score = rightAnswers + "/" + cards.length;
+        console.log(score)
+        // Send score to backend using fetch or other method
+        fetch('/submit_score/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({ category_id:  category_id, score: score })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                console.log('Score submitted successfully:', data);
+                window.location.href = '{% url "learning" %}';
+            } else {
+                console.error('Failed to submit score:', data);
+            }
+            // Optionally, update UI or show success message
+        })
+        .catch(error => {
+            console.error('Error submitting score:', error);
+            // Handle error case
+        });
+    }
+
+    function fetchInterestingFacts(cardName, categoryName) {
+        fetch('/get_interesting_facts/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({
+                card_name: cardName,
+                category_name: categoryName
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                document.querySelector('.tooltip-content').innerText = data.message;
+            } else {
+                document.querySelector('.tooltip-content').innerText = 'No interesting facts found.';
+            }
+        })
+        .catch(error => {
+            document.querySelector('.tooltip-content').innerText = 'Error fetching interesting facts.';
+            console.error('Error fetching interesting facts:', error);
+        });
+    }
+
+    function updateCorrectGuess(cardId,result,category_id) {
+        fetch('/mark_correct_guess/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({card_id: cardId,result: result,category_id:category_id})
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status !== 'success') {
+                console.error('Failed to update correct guess.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    function showLearningHistory(history) {
+        var historyContainer = document.getElementById("learningHistoryTab");
+        historyContainer.innerHTML = "<h3>Learning History</h3>";
+
+        if (history && history.length > 0) {
+            var table = document.createElement("table");
+            table.classList.add("learning-history-table");
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+
+            // Create table header
+            var headerRow = document.createElement("tr");
+            var headers = ["Sl. No.", "Time", "Attempt"];
+            headers.forEach(header => {
+                var th = document.createElement("th");
+                th.textContent = header;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create table body
+            history.forEach((entry, index) => {
+                var row = document.createElement("tr");
+                var slNoCell = document.createElement("td");
+                slNoCell.textContent = index + 1;
+                row.appendChild(slNoCell);
+
+                var timeCell = document.createElement("td");
+                timeCell.textContent = new Date(entry.timestamp).toLocaleString();
+                row.appendChild(timeCell);
+
+                var attemptCell = document.createElement("td");
+                attemptCell.textContent = entry.result === 'correct' ? 'Correct' : 'Wrong';
+                attemptCell.classList.add(entry.result);
+                row.appendChild(attemptCell);
+
+                tbody.appendChild(row);
+            });
+            table.appendChild(tbody);
+
+            historyContainer.appendChild(table);
+        } else {
+            historyContainer.innerHTML += "<p>No history available.</p>";
+        }
+    }
+</script>
+
+{% endblock %}

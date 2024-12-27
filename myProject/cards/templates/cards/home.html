@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Your specific content for the home page goes here -->
+    <section class="static-info first-tile">
+    <p>Calling all nature enthusiasts and ocean lovers! Our community is seeking dedicated volunteers to join us in our future projects focused on ocean trash and sustainability. Together, we will organize beach cleanups, engage in recycling initiatives, and collaborate with local communities to raise awareness about the importance of reducing waste.</p>
+    <button>ABOUT US</button>
+</section>
+<section class="dynamic-info">
+    <div class="tile">
+        <img src="{% static 'images/card_icon.png' %}" alt="Card Icon">
+        <br>Total Number of Card<br><span>30</span>
+    </div>
+    <div class="tile">
+        <img src="{% static 'images/deck_icon.png' %}" alt="Deck Icon">
+        <br>Total Number of Deck<br><span id="deckCount">{{ cat_count }}</span>
+    </div>
+    <div class="tile">
+        <img src="{% static 'images/score_icon.png' %}" alt="Score Icon">
+        <br>Recent Score<br><span id="recentScore">{{ recent_score }}</span>
+    </div>
+    <div class="tile">
+        <img src="{% static 'images/streak_icon.png' %}" alt="Streak Icon">
+        <br>Day Streak<br><span>5</span>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fetch recent score and update the DOM
+        console.log("recentscore")
+        fetch('/get_recent_score/')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('recentScore').textContent = data.recent_score;
+            })
+            .catch(error => {
+                console.error('Error fetching recent score:', error);
+                // Handle error case
+            });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fetch recent score and update the DOM
+        console.log("deckcount")
+        fetch('/get_deck_count/')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('deckCount').textContent = data.cat_count;
+            })
+            .catch(error => {
+                console.error('Error fetching no of decks:', error);
+                // Handle error case
+            });
+    });
+</script>
+{% endblock %}

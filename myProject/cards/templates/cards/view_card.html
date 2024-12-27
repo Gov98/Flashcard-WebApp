@@ -1,0 +1,32 @@
+<!-- view_card.html -->
+{% extends "base.html" %}
+{% block title %}View Card{% endblock %}
+{% block content %}
+
+<div class="card-tile">
+    <h1 class="card-title">Card Details</h1>
+    <form action="{% url 'update_card' category_id=category_id card_id=card.Card_Id %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="card_name">Card Name:</label>
+            <input type="text" id="card_name" name="card_name" value="{{ card.Card_Name }}">
+        </div>
+        <div class="form-field">
+            <label for="card_desc">Card Description:</label>
+            <input type="text" id="card_desc" name="card_desc" value="{{ card.Card_Desc }}">
+        </div>
+        <div class="form-field">
+            <label for="image">Card Image:</label>
+            <input type="file" id="image" name="image">
+            {% if card.Image_Base64 %}
+            <div class="form-field viewcard-image-container">
+                <img class="viewcard-image" src="data:image/png;base64,{{ card.Image_Base64 }}" alt="{{ card.Card_Name }}" style="max-width: 100%; height: auto;">
+            </div>
+            {% endif %}
+        </div>
+        <div>
+            <button type="submit" class="glow-on-hover">Update</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

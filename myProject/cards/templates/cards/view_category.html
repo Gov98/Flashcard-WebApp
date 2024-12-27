@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Category Details - {{ category.Category_Name }}{% endblock %}
+
+{% block content %}
+<div class="cards-container">
+    {% for card in category.Cards %}
+        <div class="pokemon-card">
+            <div class="card-header">
+                <h2 class="card-name">{{ card.Card_Name }}</h2>
+            </div>
+            <div class="card-image-container">
+                {% if card.Image_Base64 %}
+                    <a href="{% url 'view_card' category.Category_Id card.Card_Id %}">
+                        <img src="data:image/jpeg;base64,{{ card.Image_Base64 }}" alt="{{ card.Card_Name }}" class="card-image">
+                    </a>
+                {% endif %}
+                <p class="card-category">{{ category.Category_Name }}</p>
+            </div>
+            <div class="card-description">
+                <div class="description-header">
+                    <span class="description-icon">Description</span>
+                </div>
+                <p class="description-text">{{ card.Card_Desc }}</p>
+            </div>
+            <div class="card-footer">
+                <p>©2024 Flashcards</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<a href="{% url 'manage_cards' %}">Back to Manage Cards</a>
+{% endblock %}

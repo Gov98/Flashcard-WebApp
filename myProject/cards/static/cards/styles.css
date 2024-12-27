@@ -1,0 +1,85 @@
+
+
+.category-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category-tile {
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.category-tile h2 {
+    margin-top: 0;
+}
+
+.category-tile a {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.category-tile a:hover {
+    background-color: #0056b3;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}KARTEIKARTEN{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'cards/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'cards/css/button.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jaro:opsz@6..72&family=Monoton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        main {
+            background: url("{% static 'images/home.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Static Section -->
+    <header>
+        <div class="left-section">
+            <div class="menu-icon" onclick="toggleMenu(event)">
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+            </div>
+            <div class="navbar">
+                <h1 class="title-kartei">KARTEIKARTEN</h1>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-buttons">
+                <a href="{% url 'home' %}" class="nav-button">Home</a>
+                <a href="#" class="nav-button">About</a>
+                <a href="#" class="nav-button">@</a>
+                <a href="#" class="nav-button">📞</a>
+            </div>
+        </nav>
+        <div class="menu" id="menu">
+            <div class="top-items">
+                <a href="#">Dashboard</a>
+                <a href="{% url 'create_card' %}">Create Card</a>
+                <a href="#">Manage Card</a>
+                <a href="#">Learning</a>
+            </div>
+            <div class="bottom-links">
+                <a href="#">Account</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dynamic Section -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('menu');
+            var menuIcon = document.querySelector('.menu-icon');
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

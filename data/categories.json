@@ -1,0 +1,29 @@
+{
+    "Category": [
+        {
+            "Category_Id": 1,
+            "Category_Name": "Animals",
+            "Category_Desc": "Wild beings"
+        },
+        {
+            "Category_Id": 2,
+            "Category_Name": "Birds",
+            "Category_Desc": "Curious, diverse, and lively",
+            "Score": [
+                "0/2",
+                "0/2"
+            ]
+        },
+        {
+            "Category_Id": 3,
+            "Category_Name": "Bikes",
+            "Category_Desc": "Two-wheeled speed machines"
+        },
+        {
+            "Category_Id": 4,
+            "Category_Name": "German Traffic Signs",
+            "Category_Desc": "This guide is designed learn German traffic signs"
+        }
+    ],
+    "recent_score": "0/2"
+}

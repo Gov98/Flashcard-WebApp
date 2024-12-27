@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}KARTEIKARTEN - Create Card{% endblock %}
+
+
+{% block content %}
+<div class="card-tile">
+    <h1 class="card-title">Create Card</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="category_id">Category:</label>
+            <select id="category_id" name="category_id" required>
+                {% for category in categories %}
+                    <option value="{{ category.Category_Id }}">{{ category.Category_Name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="card_name">Card Name:</label>
+            <input type="text" id="card_name" name="card_name" required>
+        </div>
+        <div class="form-field">
+            <label for="card_desc">Card Description:</label>
+            <input type="text" id="card_desc" name="card_desc" required>
+        </div>
+        <div class="form-field">
+            <label for="image">Image Upload:</label>
+            <input type="file" id="image" name="image" required>
+        </div>
+        <button type="submit" class="glow-on-hover">Create</button>
+    </form>
+    <a href="{% url 'home' %}" >Back to Home</a>
+</div>
+{% endblock %}

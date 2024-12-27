@@ -1,0 +1,23 @@
+<!-- create_category.html -->
+
+{% extends 'base.html' %}
+{% block title %}KARTEIKARTEN - Create Category{% endblock %}
+
+{% block content %}
+<div class="card-tile">
+    <h1 class="card-title">Create Category</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="category_name">Category Name:</label>
+            <input type="text" id="category_name" name="category_name" required>
+        </div>
+        <div class="form-field">
+            <label for="category_desc">Category Description:</label>
+            <input type="text" id="category_desc" name="category_desc" required>
+        </div>
+        <button type="submit" class="glow-on-hover">Create</button>
+    </form>
+    <a href="{% url 'home' %}" >Back to Home</a>
+</div>
+{% endblock %}

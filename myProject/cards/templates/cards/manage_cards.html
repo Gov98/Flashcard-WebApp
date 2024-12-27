@@ -1,0 +1,17 @@
+<!-- manage_cards.html -->
+
+{% extends 'base.html' %}
+{% block title %}KARTEIKARTEN - Manage Cards{% endblock %}
+
+{% block content %}
+<div class="manage-cards-container">
+    <h1 class="manage-cards-title">Manage Cards</h1>
+    <div class="categories-container">
+        {% for category in categories %}
+        <div class="category-card">
+            <a href="{% url 'view_category' category.Category_Id %}">{{ category.Category_Name }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

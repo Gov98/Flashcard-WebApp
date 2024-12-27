@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Learning{% endblock %}
+
+{% block content %}
+<div class="learning-container">
+    <h1 class="learning-title">Categories</h1>
+    <div class="learncategories-container">
+        {% for category in categories %}
+            <div class="learncategory-card">
+                <h2 class="category-name">{{ category.Category_Name }}</h2>
+                {% if category.Category_Desc %}
+                    <p class="category-desc">{{ category.Category_Desc }}</p>
+                {% endif %}
+                <p class="cards-count">{{ category.No_Of_Cards }} cards in deck</p>
+                <a href="{% url 'study_flashcards' category.Category_Id %}" class="study-button">Study</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
