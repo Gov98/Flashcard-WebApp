@@ -1,83 +1,95 @@
 # Flashcard Trainer
-Flashcard Trainer is a web application designed to enhance learning efficiency through interactive flashcards. This project, created as part of a master's program in Automotive Engineering Production, is built using Python, Django, and JavaScript. It offers intuitive tools for creating, managing, and studying flashcards, along with features like learning history tracking and AI-powered insights.
 
-Features
+**Flashcard Trainer** is a web application designed to enhance learning efficiency through interactive flashcards. This project, created as part of a master's program in Automotive Engineering Production, is built using Python, Django, and JavaScript. It offers intuitive tools for creating, managing, and studying flashcards, along with features like learning history tracking and AI-powered insights.
 
-    Create and Manage Flashcards: Organize flashcards into decks with customizable categories.
-    Interactive Learning Mode: Study flashcards with options to track correct and incorrect answers.
-    Learning Algorithm: Flashcard frequency adjusts based on performance.
-    AI Integration: Includes interesting facts for enhanced learning experiences.
-    User-Friendly Design: Responsive, interactive UI for seamless navigation.
-    Learning History: Tracks user performance over time.
+## Features
 
-Requirements
+- **Create and Manage Flashcards**:
+  - **Create Category**: Organize flashcards into decks (categories).
+  - **Create Card**: Add individual flashcards to categories with a question on the front and an answer on the back.
+  - **Manage Card**: Update or delete existing flashcards and decks.
+- **Interactive Learning Mode**:
+  - **Learning Section**: Select a category to start a flashcard game where cards are shown in random order.
+  - **Answer Tracking**: Mark your answer as correct or incorrect; responses are recorded in the backend as learning history.
+- **Learning Algorithm**:
+  - Correct answers are skipped for a defined time period (default: 3 minutes, adjustable in `myProject/cards/views.py` at line 48).
+- **AI Integration**:
+  - Uses the Llama API to provide interesting facts about created flashcards in the learning section.
+- **Dashboard Summary**:
+  - Displays total number of cards, total number of decks, recent scores, and archived cards on the home page.
+
+## Requirements
 
 To run this project, you will need:
 
-    Python 3.8+
-    Django 4.0+
-    JavaScript-enabled browser
+- Python 3.8+
+- Django 4.0+
+- Node.js (for front-end dependencies, if applicable)
+- JavaScript-enabled browser
+- Llama API key for AI integration
 
-Setup Instructions
+## Setup Instructions
 
-    Clone the repository:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/flashcard-trainer.git
+   cd flashcard-trainer
+   ```
 
-git clone https://github.com/yourusername/flashcard-trainer.git
-cd flashcard-trainer
+2. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Install Python dependencies:
+3. Getting into the repsective directory:
+   ```bash
+   cd myProject
+   ```
 
-pip install -r requirements.txt
+4. Paste your Llama API token or preferred API token into `myProject/cards/views.py`:
+   - Locate the `learning` function at line 297 and replace the placeholder with your API token.
 
-Set up the database:
+5. Run the development server:
+   ```bash
+   python manage.py runserver
+   ```
 
-python manage.py makemigrations
-python manage.py migrate
+6. Open your browser and navigate to:
+   ```
+   http://127.0.0.1:8000/
+   ```
 
-Run the development server:
+## Usage
 
-python manage.py runserver
+1. Navigate to the homepage to view:
+   - Total number of cards
+   - Total number of decks (categories)
+   - Recent scores
+   - Archived cards
+2. Use the "Create Category" section to define new decks for organizing flashcards.
+3. Add cards to a selected category using the "Create Card" section.
+4. Manage cards (update or delete) in the "Manage Card" section.
+5. Start a flashcard game in the "Learning" section:
+   - Select a category to begin.
+   - Cards are displayed randomly, and answers can be marked as correct or incorrect.
+   - AI-generated interesting facts are provided for flashcards.
 
-Open your browser and navigate to:
+## AI Integration
 
-    http://127.0.0.1:8000/
+The application uses the **Llama API** for AI-powered features:
+- **Learning Section**: Provides interesting facts about created flashcards to enhance user engagement.
 
-Usage
 
-    Navigate to the homepage to view recent scores and available categories.
-    Create new categories and flashcards using the "Create" section.
-    Access the "Learning" section to study flashcards interactively.
-    Manage cards and decks in the "Manage Cards" section.
-    Track your learning history and scores for continuous improvement.
-
-Contribution
-
-We welcome contributions to improve this project. To contribute:
-
-    Fork the repository.
-    Create a new branch for your feature:
-
-git checkout -b feature-name
-
-Commit your changes:
-
-git commit -m "Add feature-name"
-
-Push to the branch:
-
-    git push origin feature-name
-
-    Open a pull request.
-
-License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-Screenshots
 
-    Home Page:
+## Screenshots
 
-    Learning Page:
+- **Home Page**:
+  ![Home Page](images/home_page.png)
 
-For more images and details, see the portfolio_pdf_compressed.pdf.
+- **Learning Section**:
+  ![Learning Section](images/learning_section.png)
 
-You can modify the placeholder paths (e.g., images/home_page.png) once you add screenshots to your repository. Let me know if you'd like any further adjustments!
+For additional screenshots, please refer to the project documentation.
