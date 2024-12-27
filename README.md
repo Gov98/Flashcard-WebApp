@@ -99,5 +99,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
   ![image](https://github.com/user-attachments/assets/d46a6e74-1372-491d-a3ae-5d1f090d4d41)
 
 
-
-For additional screenshots, please refer to the project documentation.
